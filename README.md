@@ -9,15 +9,12 @@ Unzip it in your main folder ~/
 
 Enter in FAIRtools/ where is setup.py
 
-Run "python install ." or with sudo if it's necessary.
+Run "python setup.py install" or with sudo if it's necessary.
 
 Now you're ready to use FAIRtools.
 
 #### Example:
-Import FAIRtools as f
+From FAIRtools import collections as c
 
-f.metrics()
+c.collections()
 
-f.collections()
-
-f.evaluations()
