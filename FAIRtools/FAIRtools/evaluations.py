@@ -4,7 +4,7 @@
 
 link = 'http://linkeddata.systems:3000'
 base_link = 'https://purl.org/fair-metrics/'
-from .showup import showup
+from .showup import showup, showin
 import urllib2
 import json
 import requests
