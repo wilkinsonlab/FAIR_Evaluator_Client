@@ -10,22 +10,80 @@ import json
 import requests
 
 
-def metrics():
-    req = urllib2.urlopen(link+'/metrics.json')
-    principle = raw_input("Choose your principle: (Ex. R1.1, I3 or all)")
-    if "all" in principle:
-        showup(req)
-    else:
-        json_off = json.load(req)
-        for i in json_off:
-            if base_link+principle.upper() == (i["principle"]).upper():
-                for m in i:
-                    if type(i[m]) == list:
-                        showin(i[m])
-                    else:
-                        i[m] = str(i[m])
-                        print ("\t%s:  %s")%(m, i[m])
-                print "\n"
-            else:
-                continue
+#def metrics():
+    #req = urllib2.urlopen(link+'/metrics.json')
+    #principle = raw_input("Choose your principle: (Ex. R1.1, I3 or all)")
+    #if "all" in principle:
+        #showup(req)
+    #else:
+        #json_off = json.load(req)
+        #for i in json_off:
+            #if base_link+principle.upper() == (i["principle"]).upper():
+                #for m in i:
+                    #if type(i[m]) == list:
+                        #showin(i[m])
+                    #else:
+                        #i[m] = str(i[m])
+                        #print ("\t%s:  %s")%(m, i[m])
+                #print "\n"
+            #else:
+                #continue
 
+
+class metrics:
+    
+    def __init__(self, Id):
+        sec = ("%s/metrics/%s.json") % ( link, Id)
+        self.req = urllib2.urlopen(sec)
+        self.ID = json.load(self.req)
+
+
+    def title(self):
+        for i in self.ID:            
+            if self.ID[i] == self.ID["name"]:
+                self.ID[i] = str(self.ID[i])
+                return  self.ID[i]
+                #print ("\t%s:  %s")%(i, self.ID[i])
+        #print "\n"
+    
+    
+    def url(self):
+        for i in self.ID:            
+            if self.ID[i] == self.ID["url"]:
+                self.ID[i] = str(self.ID[i])
+                return  self.ID[i]
+                #print ("\t%s:  %s")%(i, self.ID[i])
+        #print "\n"
+    
+    
+    def idi(self):
+        for i in self.ID:            
+            if self.ID[i] == self.ID["id"]:
+                self.ID[i] = str(self.ID[i])
+                return  self.ID[i]
+                #print ("\t%s:  %s")%(i, self.ID[i])
+        #print "\n"
+
+
+    def organization(self):
+          for i in self.ID:            
+            if self.ID[i] == self.ID["organization"]:
+                self.ID[i] = str(self.ID[i])
+                return  self.ID[i]
+                #print ("\t%s:  %s")%(i, self.ID[i])
+        #print "\n"
+
+    def contact(self):
+        for i in self.ID:            
+            if self.ID[i] == self.ID["contact"]:
+                self.ID[i] = str(self.ID[i])
+                return  self.ID[i]
+                #print ("\t%s:  %s")%(i, self.ID[i])
+        #print "\n"
+
+
+    def metrics(self):
+        for i in self.ID:
+            if self.ID[i] == self.ID["metrics"]:
+                x = showin(self.ID[i])
+                return x
