@@ -30,7 +30,7 @@ import requests
                 #continue
 
 
-class collection:
+class collections:
     
     def __init__(self, Id):
         sec = ("%s/collections/%s.json") % ( link, Id)
