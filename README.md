@@ -15,8 +15,11 @@ Now you're ready to use FAIRtools.
 
 #### Example:
 From FAIRtools import collections
+
 From FAIRtools import metrics 
+
 From FAIRtools import evaluations
 
 c = collections.collections(id)
+
 c.title()
