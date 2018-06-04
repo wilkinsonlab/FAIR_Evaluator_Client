@@ -40,7 +40,7 @@ class evaluations:
 
     def title(self):
         for i in self.ID:            
-            if self.ID[i] == self.ID["name"]:
+            if self.ID[i] == self.ID["title"]:
                 self.ID[i] = str(self.ID[i])
                 return  self.ID[i]
                 #print ("\t%s:  %s")%(i, self.ID[i])
@@ -56,7 +56,16 @@ class evaluations:
         #print "\n"
     
     
-    def idi(self):
+    def resource(self):
+    for i in self.ID:            
+        if self.ID[i] == self.ID["resource"]:
+            self.ID[i] = str(self.ID[i])
+            return  self.ID[i]
+            #print ("\t%s:  %s")%(i, self.ID[i])
+    #print "\n"
+    
+    
+    def _id(self):
         for i in self.ID:            
             if self.ID[i] == self.ID["id"]:
                 self.ID[i] = str(self.ID[i])
@@ -65,25 +74,28 @@ class evaluations:
         #print "\n"
 
 
-    def organization(self):
+    def body(self):
           for i in self.ID:            
-            if self.ID[i] == self.ID["organization"]:
+            if self.ID[i] == self.ID["body"]:
                 self.ID[i] = str(self.ID[i])
                 return  self.ID[i]
                 #print ("\t%s:  %s")%(i, self.ID[i])
         #print "\n"
 
-    def contact(self):
+
+    def executor(self):
         for i in self.ID:            
-            if self.ID[i] == self.ID["contact"]:
+            if self.ID[i] == self.ID["executor"]:
                 self.ID[i] = str(self.ID[i])
                 return  self.ID[i]
                 #print ("\t%s:  %s")%(i, self.ID[i])
         #print "\n"
 
 
-    def metrics(self):
-        for i in self.ID:
-            if self.ID[i] == self.ID["metrics"]:
-                x = showin(self.ID[i])
-                return x
+    def collection(self):
+        for i in self.ID:            
+            if self.ID[i] == self.ID["collection"]:
+                self.ID[i] = str(self.ID[i])
+                return  self.ID[i]
+                #print ("\t%s:  %s")%(i, self.ID[i])
+        #print "\n"x

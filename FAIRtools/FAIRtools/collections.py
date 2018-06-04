@@ -56,7 +56,7 @@ class collection:
         #print "\n"
     
     
-    def idi(self):
+    def _id(self):
         for i in self.ID:            
             if self.ID[i] == self.ID["id"]:
                 self.ID[i] = str(self.ID[i])
@@ -72,6 +72,7 @@ class collection:
                 return  self.ID[i]
                 #print ("\t%s:  %s")%(i, self.ID[i])
         #print "\n"
+
 
     def contact(self):
         for i in self.ID:            

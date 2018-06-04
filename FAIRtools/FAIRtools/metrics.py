@@ -47,16 +47,25 @@ class metrics:
         #print "\n"
     
     
-    def url(self):
+    def smarturl(self):
         for i in self.ID:            
-            if self.ID[i] == self.ID["url"]:
+            if self.ID[i] == self.ID["smarturl"]:
                 self.ID[i] = str(self.ID[i])
                 return  self.ID[i]
                 #print ("\t%s:  %s")%(i, self.ID[i])
         #print "\n"
+
+
+    def creator(self):
+        for i in self.ID:            
+            if self.ID[i] == self.ID["creator"]:
+                self.ID[i] = str(self.ID[i])
+                return  self.ID[i]
+                #print ("\t%s:  %s")%(i, self.ID[i])
+        #print "\n"
+
     
-    
-    def idi(self):
+    def _id(self):
         for i in self.ID:            
             if self.ID[i] == self.ID["id"]:
                 self.ID[i] = str(self.ID[i])
@@ -65,25 +74,19 @@ class metrics:
         #print "\n"
 
 
-    def organization(self):
+    def principle(self):
           for i in self.ID:            
-            if self.ID[i] == self.ID["organization"]:
+            if self.ID[i] == self.ID["principle"]:
                 self.ID[i] = str(self.ID[i])
                 return  self.ID[i]
                 #print ("\t%s:  %s")%(i, self.ID[i])
         #print "\n"
+
 
     def contact(self):
         for i in self.ID:            
-            if self.ID[i] == self.ID["contact"]:
+            if self.ID[i] == self.ID["email"]:
                 self.ID[i] = str(self.ID[i])
                 return  self.ID[i]
                 #print ("\t%s:  %s")%(i, self.ID[i])
         #print "\n"
-
-
-    def metrics(self):
-        for i in self.ID:
-            if self.ID[i] == self.ID["metrics"]:
-                x = showin(self.ID[i])
-                return x
