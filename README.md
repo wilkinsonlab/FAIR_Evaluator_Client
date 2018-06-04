@@ -14,10 +14,9 @@ Run "python setup.py install" or with sudo if it's necessary.
 Now you're ready to use FAIRtools.
 
 #### Example:
-From FAIRtools.collections import collections 
-From FAIRtools.metrics import metrics 
-From FAIRtools.evaluations import evaluations 
+From FAIRtools import collections
+From FAIRtools import metrics 
+From FAIRtools import evaluations
 
-collections()
-metrics()
-evaluations()
+c = collections.collections(id)
+c.title()
