@@ -4,9 +4,7 @@
 
 link = 'http://linkeddata.systems:3000'
 base_link = 'https://purl.org/fair-metrics/'
-import urllib2
 import json
-import requests
 
 
 def showup(req):
@@ -30,6 +28,3 @@ def showin(ins):
                 i[m] = str(i[m])
                 print ("\t%s:  %s")%(m, i[m])
         print"\n"
-
-
-
