@@ -4,21 +4,20 @@
 
 link = 'http://linkeddata.systems:3000'
 base_link = 'https://purl.org/fair-metrics/'
-from .showup import showup, showin
+from .showup import showin
 import urllib2
 import json
-import requests
 
 
-#def metrics():
-    #req = urllib2.urlopen(link+'/metrics.json')
-    #principle = raw_input("Choose your principle: (Ex. R1.1, I3 or all)")
+#def collectionS():
+    #req = urllib2.urlopen(link+'/collections.json')
+    #principle = raw_input("Choose your collections id or name: (Ex. 2, \"A Metrics\" or all)")
     #if "all" in principle:
         #showup(req)
     #else:
         #json_off = json.load(req)
         #for i in json_off:
-            #if base_link+principle.upper() == (i["principle"]).upper():
+            #if principle == str(i["id"]) or  str(principle).upper() == (i["name"]).upper():
                 #for m in i:
                     #if type(i[m]) == list:
                         #showin(i[m])
@@ -30,43 +29,34 @@ import requests
                 #continue
 
 
-class metrics:
-    
+class Collections:
+
     def __init__(self, Id):
-        sec = ("%s/metrics/%s.json") % ( link, Id)
+        sec = ("%s/collections/%s.json") % ( link, Id)
         self.req = urllib2.urlopen(sec)
         self.ID = json.load(self.req)
 
 
     def title(self):
-        for i in self.ID:            
+        for i in self.ID:
             if self.ID[i] == self.ID["name"]:
                 self.ID[i] = str(self.ID[i])
                 return  self.ID[i]
                 #print ("\t%s:  %s")%(i, self.ID[i])
         #print "\n"
-    
-    
-    def smarturl(self):
-        for i in self.ID:            
-            if self.ID[i] == self.ID["smarturl"]:
+
+
+    def url(self):
+        for i in self.ID:
+            if self.ID[i] == self.ID["url"]:
                 self.ID[i] = str(self.ID[i])
                 return  self.ID[i]
                 #print ("\t%s:  %s")%(i, self.ID[i])
         #print "\n"
 
 
-    def creator(self):
-        for i in self.ID:            
-            if self.ID[i] == self.ID["creator"]:
-                self.ID[i] = str(self.ID[i])
-                return  self.ID[i]
-                #print ("\t%s:  %s")%(i, self.ID[i])
-        #print "\n"
-
-    
     def _id(self):
-        for i in self.ID:            
+        for i in self.ID:
             if self.ID[i] == self.ID["id"]:
                 self.ID[i] = str(self.ID[i])
                 return  self.ID[i]
@@ -74,9 +64,9 @@ class metrics:
         #print "\n"
 
 
-    def principle(self):
-          for i in self.ID:            
-            if self.ID[i] == self.ID["principle"]:
+    def organization(self):
+          for i in self.ID:
+            if self.ID[i] == self.ID["organization"]:
                 self.ID[i] = str(self.ID[i])
                 return  self.ID[i]
                 #print ("\t%s:  %s")%(i, self.ID[i])
@@ -84,9 +74,16 @@ class metrics:
 
 
     def contact(self):
-        for i in self.ID:            
-            if self.ID[i] == self.ID["email"]:
+        for i in self.ID:
+            if self.ID[i] == self.ID["contact"]:
                 self.ID[i] = str(self.ID[i])
                 return  self.ID[i]
                 #print ("\t%s:  %s")%(i, self.ID[i])
         #print "\n"
+
+
+    def metrics(self):
+        for i in self.ID:
+            if self.ID[i] == self.ID["metrics"]:
+                x = showin(self.ID[i])
+                return x
