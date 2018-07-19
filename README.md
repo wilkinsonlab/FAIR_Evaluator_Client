@@ -42,7 +42,7 @@ c.title()
   - Configuration can be found in `.travis.yml`
 
 ## Software citation
-Developer note: to make your software citable, once there is a release of this package, generate a DOI (for instance using [Zenodo](https://zenodo.org/)) and generate a `CITATION.cff` using [doi2cff](https://github.com/citation-file-format/doi2cff) .
+Mario_P, Carlos Martinez, & Mark Wilkinson. (2018, July 19). wilkinsonlab/FAIR_Evaluator_Client: First FAIR Evaluator Client release (Version v0.1.0). Zenodo. http://doi.org/10.5281/zenodo.1315447 .
 
 # License
 Copyright (c) 2018, Wilkinson Laboratory for Biological Informatics
