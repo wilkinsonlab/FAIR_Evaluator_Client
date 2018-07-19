@@ -17,7 +17,6 @@ pip install git+https://github.com/wilkinsonlab/FAIR_Evaluator_Client.git
 ```
 
  - TODO: add to [PyPI](https://pypi.org/)
- - TODO: change pip to install from wilkinsonlab
 
 ## Usage example
 ```python
