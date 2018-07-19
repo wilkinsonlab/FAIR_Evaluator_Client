@@ -13,7 +13,7 @@ TODO
 Install via `pip`:
 
 ```
-pip install git+https://github.com/c-martinez/FAIR_Evaluator_Client.git
+pip install git+https://github.com/wilkinsonlab/FAIR_Evaluator_Client.git
 ```
 
  - TODO: add to [PyPI](https://pypi.org/)
