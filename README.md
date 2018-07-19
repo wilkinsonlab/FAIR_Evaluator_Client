@@ -42,7 +42,7 @@ c.title()
   - Configuration can be found in `.travis.yml`
 
 ## Software citation
-Mario_P, Carlos Martinez, & Mark Wilkinson. (2018, July 19). wilkinsonlab/FAIR_Evaluator_Client: First FAIR Evaluator Client release (Version v0.1.0). Zenodo. http://doi.org/10.5281/zenodo.1315447 .
+Mario Prieto Godoy, Carlos Martinez, & Mark Wilkinson. (2018, July 19). wilkinsonlab/FAIR_Evaluator_Client: First FAIR Evaluator Client release (Version v0.1.0). Zenodo. http://doi.org/10.5281/zenodo.1315447 .
 
 # License
 Copyright (c) 2018, Wilkinson Laboratory for Biological Informatics
